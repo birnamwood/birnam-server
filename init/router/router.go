@@ -9,7 +9,7 @@ import (
 
 func Init(port string) {
 	e := echo.New()
-	e.HideBanner = true
+	e.HideBanner = false
 	e.HidePort = true
 	// ルーティング設定
 	e.GET("/test", handler.GetTest)
