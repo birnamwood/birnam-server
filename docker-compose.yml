@@ -6,8 +6,6 @@ services:
     ports:
       - 8000:8000
       - 5002:5002
-    depends_on:
-      - postgres
     build:
       context: .
       dockerfile: ./docker/go/Dockerfile
@@ -15,4 +13,4 @@ services:
       - GOPATH=/go
     volumes:
       # ホストOS：コンテナ側
-      - ./:/go/src/github.com/birnamwood/go-server-base/
+      - ./:/go/src/github.com/birnamwood/birnam-server/

@@ -2,10 +2,9 @@ package main
 
 import (
 	"log"
-	"net/http"
 	"os"
 
-	"github.com/gin-gonic/gin"
+	"github.com/birnamwood/birnam-server/init/router"
 	_ "github.com/heroku/x/hmetrics/onload"
 )
 
@@ -16,14 +15,6 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	router := gin.New()
-	router.Use(gin.Logger())
-	router.LoadHTMLGlob("templates/*.tmpl.html")
-	router.Static("/static", "static")
+	router.Init(port)
 
-	router.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, nil)
-	})
-
-	router.Run(":" + port)
 }
