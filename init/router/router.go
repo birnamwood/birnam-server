@@ -10,7 +10,7 @@ func Init(port string) {
 	e.HideBanner = true
 	e.HidePort = false
 	// ルーティング設定
-	e.GET("/test", handler.GetTest)
+	e.GET("/", handler.GetTest)
 	e1 := e.Group("/api")
 	{
 		e1.POST("/test", handler.GetTest2)

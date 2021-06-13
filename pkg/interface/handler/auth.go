@@ -8,7 +8,7 @@ import (
 
 // GetTest 疎通確認
 func GetTest(c echo.Context) error {
-	v := map[string]string{"Result": "OK"}
+	v := map[string]string{"Result": "Welcome!!"}
 	return c.JSON(http.StatusOK, v)
 }
 
