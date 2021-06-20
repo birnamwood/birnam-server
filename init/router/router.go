@@ -13,7 +13,7 @@ func Init(port string) {
 	e.HideBanner = true
 	e.HidePort = false
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{"https://birnam-server.herokuapp.com/", "http://localhost:3000"},
+		AllowOrigins: []string{"https://birnamwood.github.io", "http://localhost:3000"},
 		AllowMethods: []string{http.MethodGet, http.MethodPost},
 	}))
 	// ルーティング設定
