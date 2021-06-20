@@ -1,0 +1,6 @@
+environment: production
+
+path: environment
+
+firebase:
+  credential: birnam-app-firebase-adminsdk-d5cyx-0535b48c04.json
