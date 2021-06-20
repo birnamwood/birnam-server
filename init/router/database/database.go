@@ -3,6 +3,7 @@ package database
 import (
 	"os"
 
+	"github.com/birnamwood/birnam-server/pkg/domain/model"
 	"github.com/jinzhu/gorm"
 	"github.com/lib/pq"
 )
@@ -21,6 +22,7 @@ func Init() {
 	if err != nil {
 		panic("データベースへの接続失敗")
 	}
+	db.AutoMigrate(&model.UserAccount{})
 }
 
 //GetDB return db connection pool
